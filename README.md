@@ -13,12 +13,12 @@ Verschieden Projekte stellen unterschiedliche Anforderungen an die Veröffentlic
 - **(Web-)Anwendungen:** Größere Software-Projekte, welche einen verallgemeinerbaren Nutzen haben. 
 
 ## Zielgruppe definieren
-Vor allem für das Readme und die Dokumentation ist es wichtig sich zu überlegen, für wen man eigentlich schreibt. Generell hilft es immer von sich selbst in zwei Jahren oder einem Kollegen der noch nichts mit dem Projekt zu tun hatte auszugehen. Die Person beherrscht zwar die Grundlagen der Programmierung oder Datenanalyse, weiß aber nichts (mehr) über die Eigenheiten und Details des Projekts. Es macht wenig Sinn, Software- oder Datenanalyseprojekte so zu dokumentieren, dass sie eine absoluter Laie verstehen würde.
+Vor allem für das Readme und die Dokumentation ist es wichtig sich zu überlegen, für wen man eigentlich schreibt. Generell hilft es immer von sich selbst in zwei Jahren oder einem Kollegen der noch nichts mit dem Projekt zu tun hatte auszugehen. Die Person beherrscht zwar die Grundlagen der Programmierung oder Datenanalyse, weiß aber nichts (mehr) über die Eigenheiten und Details des Projekts. Es macht wenig Sinn, Software- oder Datenanalyseprojekte so zu dokumentieren, dass eine absoluter Laie sie verstehen würde.
 
 ## README schreiben
 Die Readme-Datei ist der zentrale Einstiegspunkt in ein jedes Projekt. Ein gut geschriebenes Readme erleichtert den Einstieg in ein Projekt und vermittelt Kompetenz und Ernsthaftigkeit. Im Idealfall umfasst das Readme:  
 
-- **Projekttitel:** Um was geht es bei dem Projekt?.  
+- **Projekttitel:** Um was geht es bei dem Projekt?
 - **Projektbeschreibung:** Welche Funktionen oder Erkenntnisse (bei Analysen) bietet das Projekt? Was macht das Projekt besonders?.    
 - **Demo- oder Artikellink:** Wie sieht das Projekt aus, wenn alles funktioniert? Wie fühlt sich die Benutzeroberfläche an?
 - **Datenquelle:** Woher kommen die Daten und wie kann ich sie verwenden (Copyright)?
@@ -29,7 +29,11 @@ Die Readme-Datei ist der zentrale Einstiegspunkt in ein jedes Projekt. Ein gut g
 - **Roadmap:** Wo steht das Projekt und wo soll es mal hin?
 - **Dank und Quellen:** Wer hat zum dem Projekt beigetragen, wovon wurde das Projekt inspiriert?
 
-**Wie umfangreich sollte das Readme sein?** In das Readme gehören alle Informationen die unmittelbar notwendig sind, um das Projekt zu verwenden. Details, wie man eine bestimmte Datenbank aufsetzt, muss man nicht ausführen. Hier reicht ein Link oder zumindest der Hinweis das die Installation einer bestimmten Datenbank vorausgesetzt wird (Stichwort Anforderungen). 
+**Wie umfangreich sollte das Readme sein?** In das Readme gehören alle Informationen die unmittelbar notwendig sind, um das Projekt zu verwenden. Details, wie man eine bestimmte Datenbank aufsetzt, muss man nicht ausführen. Hier reicht ein Link oder zumindest der Hinweis das die Installation einer bestimmten Datenbank vorausgesetzt wird (Stichwort Anforderungen).
+
+**Wann sollte ich damit anfangen ein Readme zu schreiben?** Am besten sofort. Eigentlich sollte man alle Funktionen, die man neu hinzufügt, gleich dokumentieren. Das ist deutlich einfacher, als sich am Ende des Projektes nochmal über alle Funktionen Gedanken machen zu müssen. Außerdem merkt man beim Dokumentieren schnell, ob eine Funktion sinnvoll definiert ist (selbsterklärende Schnittstelle, Abstraktionsniveau).    
+
+## Badges
 
 ## Dokumentation und Kommentare
 Die Dokumentation im Code sollte zielführend und dem Umfang des Projekts angemessen sein. Am wichtigsten sind aber sprechende Variablen-, Funktions- und Klassennamen. Wenn eine Funktion `toDashCase(string)` heißt, muss man eigentlich nicht mehr viel kommentieren. Oft ist es wichtiger die zu erwartenden Parameter zu beschreiben. Hier sollte man gängige Konventionen wie [JSDoc](http://usejsdoc.org/) oder [pydoc](https://docs.python.org/2/library/pydoc.html) befolgen:
@@ -45,8 +49,12 @@ function toDashCase(string) {
 }
 ```
 
+Für **Datenanalysen** empfiehlt es sich [Jupyter Notebooks](https://jupyter.org/) oder [R Markdown](http://rmarkdown.rstudio.com/) zu verwenden. 
+
+## Deutsch oder Englisch?
+
 ## Lizenz hinzufügen
-Damit andere Benutzer den Code für ihre eigenen Projekte nutzen können, braucht das Repository einen Lizenz:
+Damit andere Benutzer den Code für ihre eigenen Projekte nutzen können, braucht das Repository eine Lizenz:
 
 1. Auf der Github-Projektseite **Create new file** auswählen.
 2. Als Name der Datei `LICENSE` eingeben.
@@ -54,7 +62,9 @@ Damit andere Benutzer den Code für ihre eigenen Projekte nutzen können, brauch
 4. Copyright-Zeile in `Copyright (c) 2017 Bayerischer Rundfunk` ändern.
 5. Unten auf der Seite eine Commit-Beschreibung `Add license` eingeben und bestätigen.
 
-**Warnung:** Wichtig ist, dass die Urheberrechte für alle im Repository enthaltene Inhalte (Code, Text, Daten, Schriften, Bilder ...) beim Bayerischen Rundfunk liegen. Fremdinhalte wie Software-Bibliotheken sollten immer über einen Paketmanager ([npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/), [pip](https://pypi.python.org/)) installiert werden.
+**Warnung:** Wichtig ist, dass die Urheberrechte für alle im Repository enthaltene Inhalte (Code, Text, Daten, Schriften, Bilder ...) beim Bayerischen Rundfunk liegen. Fremdinhalte wie Software-Bibliotheken sollten immer über einen Paketmanager – wie beispielsweise [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/) oder [pip](https://pypi.python.org/) – installiert werden.
+
+Eine Beispiel-Lizenz (MIT) findet sich in diesem Repository unter `LICENSE`.
 
 ## Einstellungen anpassen
 Für viele kleinere Projekte ist nicht davon auszugehen, dass sich darum einen Community bilden wird. Die Veröffentlichung dient dabei eher der Transparenz als der Nutzbarmachung. Daher kann man sich überlegen, ob man folgende Optionen in den Projekteinstellungen (Github-Settings > Options) auszuschaltet:
@@ -131,5 +141,11 @@ $ git push
 
 **Warnung:** Sobald Passwörter in ein öffentliches Repository eingecheckt wurde, sollte man sie als kompromittiert betrachten. In diesem Fall hilft es nur, die betroffenen Passwörter auszutauschen. API-Keys und Auth-Tokens müssen neu generiert werden.
 
-**Vorsorge:** Um zu verhindern, dass sensible Daten eingecheckt werden, sollte man vorsichtig mit globalen Kommandos wie `git add -A` umgehen. Besser ist es Dateien einzeln zu einem Commit hinzuzufügen. Auf jeden Fall sollten vor einem Commit noch einmal die vorgeschlagenen (staged) Dateien angeschaut werden: `git status`. Um ein versehentliches Einchecken zu verhindern, kann man sensible Konfigurationsdateien auch zur `.gitignore` hinzufügen.
+**Vorsorge:** Um zu verhindern, dass sensible Daten eingecheckt werden, sollte man vorsichtig mit globalen Kommandos wie `git add -A` umgehen. Besser ist es Dateien einzeln zu einem Commit hinzuzufügen. Auf jeden Fall sollten vor einem Commit noch einmal die vorgeschlagenen (staged) Dateien angeschaut werden: `git status`. Um ein versehentliches Einchecken zu verhindern, kann man sensible Konfigurationsdateien auch zur `.gitignore` hinzufügen. Ein .gitignore-Beispiel findet sich in diesem Repository unter `.gitignore`.
+
+## Gute Beispiele
+
+- [SRF Data](https://github.com/srfdata/)
+- [Correctiv!](https://github.com/correctiv/)
+
 

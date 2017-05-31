@@ -3,6 +3,22 @@ Ein paar Empfehlungen zum Veröffentlichen von bestehenden Projekten auf Github.
 
 _„Open Source ist kein Dogma, sondern eine partizipative Kultur der Offenheit und des Teiles. Denn am Ende konkurrieren wir (Journalisten) nicht um das beste Werkzeug, sondern um die beste Geschichte.“_
 
+## Inhalt
+
+  * [Unterschiedliche Projektarten](#unterschiedliche-projektarten)
+  * [Zielgruppe definieren](#zielgruppe-definieren)
+  * [Deutsch oder Englisch?](#deutsch-oder-englisch)
+  * [README schreiben](#readme-schreiben)
+  * [Badges](#badges)
+  * [Lizenz hinzufügen](#lizenz-hinzufügen)
+  * [Projekt veröffentlichen](#projekt-veröffentlichen)
+  * [Lokales Projekt anpassen](#lokales-projekt-anpassen)
+  * [Dokumentation und Kommentare](#dokumentation-und-kommentare)
+  * [Commit-Messages](#commit-messages)
+  * [Passwörter entfernen](#passwörter-entfernen)
+  * [Einstellungen anpassen](#einstellungen-anpassen)
+  * [Gute Beispiele](#gute-beispiele)
+
 ## Unterschiedliche Projektarten
 Verschieden Projekte stellen unterschiedliche Anforderungen an die Veröffentlichung. Oftmals überschneiden sich die Projektarten auch oder sind am besten in einem Repository zusammenzufassen:
 
@@ -18,7 +34,7 @@ Vor allem für das Readme und die Dokumentation ist es wichtig sich zu überlege
 ## Deutsch oder Englisch?
 Grundsätzlich empfiehlt sich alles in Englisch zu dokumentieren. Wenn ein Projekt aber ein ausschließlich deutsches Thema behandelt, kann man aber zumindest die README in Deutsch verfassen. Ein besondere Schwierigkeit ist die Übersetzung von deutschen Behördennamen oder Rechtsbegriffen. Im Fall von *Einspeisevergütung* bespielsweise bietet es sich an den Originalbegriff und eine Übersetzung zu verwenden: *feed-in tariffs (Einspeisevergütung)*.
 
-Die Dokumentation im Code selbst, sowie Variablen- und Funktionsnamen sollten eigentlich immer englisch sein. Allerdings gilt auch hier die Ausnahme für Behördennamen und Rechtsbegriffen.
+Die Dokumentation im Code selbst, sowie Variablen- und Funktionsnamen, sollten eigentlich immer englisch sein. Allerdings gilt auch hier die Ausnahme für Behördennamen und Rechtsbegriffen.
 
 ## README schreiben
 Eine Vorlage für ein typische README-Datei findet sich hier: [README.template.md](https://github.com/digitalegarage/open-source-guidelines/blob/master/README.template.md)
@@ -41,13 +57,60 @@ Die Readme-Datei ist der zentrale Einstiegspunkt in ein jedes Projekt. Ein gut g
 **Wann sollte ich damit anfangen ein Readme zu schreiben?** Am besten sofort. Eigentlich sollte man alle Funktionen, die man neu hinzufügt, gleich dokumentieren. Das ist deutlich einfacher, als sich am Ende des Projektes nochmal über alle Funktionen Gedanken machen zu müssen. Außerdem merkt man beim Dokumentieren schnell, ob eine Funktion sinnvoll definiert ist (selbsterklärende Schnittstelle, Abstraktionsniveau).    
 
 ## Badges
-Sehr beliebt sind sogenannte Badges oder Shields. Sie zeigen bestimmte Informationen zum Projekt, wie die Lizenz, der Build-Status oder die Zahl der Issues grafisch an. Ein vollständige Übersicht findet sich bei [Shields.io](https://shields.io/). Dort kann man auch Badges für verschieden Zwecke mit wenigen Klicks selbst erzeugen. 
+Sehr beliebt sind sogenannte Badges oder Shields. Sie zeigen bestimmte Projektinformationen, wie die Lizenz, der Build-Status oder die Zahl der Issues, direkt in der README an. Ein vollständige Übersicht findet sich bei [Shields.io](https://shields.io/). Dort kann mit wenigen Klicks Badges für verschieden Zwecke selbst erzeugen. 
 
 Beispiele aus dem [elasticsearch-frontend](https://github.com/br-data/elasticsearch-frontend):
 
 [![License](https://img.shields.io/github/license/br-data/elasticsearch-frontend.svg?style=flat-square)]() [![GitHub release](https://img.shields.io/github/release/br-data/elasticsearch-frontend.svg?style=flat-square)]() [![GitHub issues](https://img.shields.io/github/issues/br-data/elasticsearch-frontend.svg?style=flat-square)]()
 
 Man sollte sich aber genau überlegen, welche Badges wirklich Sinn machen. Die meisten Informationen sieht man in Github auch so auf einen Blick und mehr als fünf Badges wirken eher unseriös (siehe Heckscheibenaufkleber).
+
+## Lizenz hinzufügen
+Damit andere Benutzer den Code für ihre eigenen Projekte nutzen können, braucht das Repository eine Lizenz:
+
+1. Auf der Github-Projektseite **Create new file** auswählen.
+2. Als Name der Datei `LICENSE` eingeben.
+3. Vorlage **MIT** aus der Liste rechts auswählen.
+4. Copyright-Zeile in `Copyright (c) 2017 Bayerischer Rundfunk` ändern.
+5. Unten auf der Seite eine Commit-Beschreibung `Add license` eingeben und bestätigen.
+
+**Warnung:** Wichtig ist, dass die Urheberrechte für alle im Repository enthaltene Inhalte (Code, Text, Daten, Schriften, Bilder ...) beim Bayerischen Rundfunk liegen. Fremdinhalte wie Software-Bibliotheken sollten immer über einen Paketmanager – wie beispielsweise [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/) oder [pip](https://pypi.python.org/) – installiert werden.
+
+Eine Beispiel-Lizenz (MIT) findet sich in diesem Repository unter `LICENSE`.
+
+## Projekt veröffentlichen
+Das Veröffentlichen geschieht über die Github-Settings > Options:
+
+1. Projekt veröffentlich: **Make this repository public**
+2. Eigentumsrechte auf `br-data` übertragen: **Transfer ownership**
+
+Das Übertragen der Eigentumsrechte kann einige Minuten dauern.
+
+## Lokales Projekt anpassen
+Wenn man das Repository bereits aus dem eigenen Rechner ausgecheckt hat, muss man den Remote-URL anpassen. Vergisst man die die Remote-URL anzupassen kann man nicht mehr Pushen und Pullen. Die neue URL bekommt man in dem man auf der Github-Projektseite auf **Clone or download** geht. Es empfiehlt sich immer den SSH-Link zu kopieren (statt des HTTPS-Links).
+
+**In Github Desktop**
+
+1. In der rechten oberen Ecke auf *Settings (⚙️) > Repository Settings...* gehen
+2. In der Sidebar *Remote* auswählen
+3. Im Feld *Primary remote repository* die URL austauschen
+4. Mit *Ok* bestätigen und versuchsweise synchronisieren
+
+**Kommandozeile**
+
+Die Remote-URL kann man auch mit folgendem Kommandozeilenbefehl ändern:
+
+```
+$ git remote set-url origin git@github.com:br-data/mein-repo.git
+```
+
+Um zu überprüfen, ob die Änderung geklappt hat, kann man sich die Remote-URL mit folgendem Befehl anschauen:
+
+```
+$ git remote -v
+origin  git@github.com:br-data/mein-repo.git (fetch)
+origin  git@github.com:br-data/mein-repo.git (push)
+```
 
 ## Dokumentation und Kommentare
 Die Dokumentation im Code sollte zielführend und dem Umfang des Projekts angemessen sein. Am wichtigsten sind aber sprechende Variablen-, Funktions- und Klassennamen. Wenn eine Funktion `toDashCase(string)` heißt, muss man eigentlich nicht mehr viel kommentieren. Oft ist es wichtiger die zu erwartenden Parameter zu beschreiben. Hier sollte man gängige Konventionen wie [JSDoc](http://usejsdoc.org/) oder [pydoc](https://docs.python.org/2/library/pydoc.html) befolgen:
@@ -63,53 +126,15 @@ function toDashCase(string) {
 }
 ```
 
-Für **Datenanalysen** empfiehlt es sich [Jupyter Notebooks](https://jupyter.org/) oder [R Markdown](http://rmarkdown.rstudio.com/) zu verwenden. 
+Für **Datenanalysen** empfiehlt es sich [Jupyter Notebooks](https://jupyter.org/) oder [R Markdown](http://rmarkdown.rstudio.com/) zu verwenden.
 
-## Lizenz hinzufügen
-Damit andere Benutzer den Code für ihre eigenen Projekte nutzen können, braucht das Repository eine Lizenz:
+## Commit-Messages
+Beim Veröffentlichen des Repositories wird auch der ganze Commit-Verlauf nach außen hin sichtbar. Das sollte eine Motivation sein, sich auch in Zukunft besonders viel Mühe bei den Commit-Messages zu geben. Gute Commit-Messages beginnen mit einem Verb (Imperativ Präsens, erster Buchstabe großgeschrieben) und sind nicht länger als 50 Zeichen. Außerdem braucht man am Ende der Commit-Message keinen Punkt zu setzen.
 
-1. Auf der Github-Projektseite **Create new file** auswählen.
-2. Als Name der Datei `LICENSE` eingeben.
-3. Vorlage **MIT** aus der Liste rechts auswählen.
-4. Copyright-Zeile in `Copyright (c) 2017 Bayerischer Rundfunk` ändern.
-5. Unten auf der Seite eine Commit-Beschreibung `Add license` eingeben und bestätigen.
-
-**Warnung:** Wichtig ist, dass die Urheberrechte für alle im Repository enthaltene Inhalte (Code, Text, Daten, Schriften, Bilder ...) beim Bayerischen Rundfunk liegen. Fremdinhalte wie Software-Bibliotheken sollten immer über einen Paketmanager – wie beispielsweise [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/) oder [pip](https://pypi.python.org/) – installiert werden.
-
-Eine Beispiel-Lizenz (MIT) findet sich in diesem Repository unter `LICENSE`.
-
-## Einstellungen anpassen
-Für viele kleinere Projekte ist nicht davon auszugehen, dass sich darum einen Community bilden wird. Die Veröffentlichung dient dabei eher der Transparenz als der Nutzbarmachung. Daher kann man sich überlegen, ob man folgende Optionen in den Projekteinstellungen (Github-Settings > Options) auszuschaltet:
-
-- **Wikis**: Eher für die ausführliche Projektdokumentation gedacht. 
-- **Issues**: Benutzer und Kollegen können Fehler melden und sich Funktionen wünschen.
-- **Projects**: Kanban-Board, Todos und Milestones für größere Projekte.  
-
-Wenn man diese Optionen aktiviert, sollte man auch bereit sein, Zeit in die Bearbeitung von Benutzerwünschen und Bugs zu investieren.
-
-## Projekt veröffentlichen
-Das Veröffentlichen geschieht über die Github-Settings > Options:
-
-1. Projekt veröffentlich: **Make this repository public**
-2. Eigentumsrechte auf `br-data` übertragen: **Transfer ownership**
-
-Das Übertragen der Eigentumsrechte kann einige Minuten dauern.
-
-## Lokales Projekt anpassen
-Wenn man das Repository bereits aus dem eigenen Rechner ausgecheckt hat, muss man den Remote-URL anpassen. Vergisst man die die Remote-URL anzupassen kann man nicht mehr Pushen und Pullen. Die neue URL bekommt man in dem man auf der Github-Projektseite auf **Clone or download** geht. Es empfiehlt sich immer den SSH-Link zu kopieren (statt des HTTPS-Links).
-
-Die Remote-URL kann man mit folgendem Kommandozeilenbefehl ändern:
+Beispiel:
 
 ```
-$ git remote set-url origin git@github.com:br-data/mein-repo.git
-```
-
-Um zu überprüfen, ob die Änderung geklappt hat, kann man sich die Remote-URL mit folgendem Befehl anschauen:
-
-```
-$ git remote -v
-origin	git@github.com:br-data/mein-repo.git (fetch)
-origin	git@github.com:br-data/mein-repo.git (push)
+$ git commit -m "Fix social media icon alignment in header"
 ```
 
 ## Passwörter entfernen
@@ -155,9 +180,16 @@ $ git push
 
 **Vorsorge:** Um zu verhindern, dass sensible Daten eingecheckt werden, sollte man vorsichtig mit globalen Kommandos wie `git add -A` umgehen. Besser ist es Dateien einzeln zu einem Commit hinzuzufügen. Auf jeden Fall sollten vor einem Commit noch einmal die vorgeschlagenen (staged) Dateien angeschaut werden: `git status`. Um ein versehentliches Einchecken zu verhindern, kann man sensible Konfigurationsdateien auch zur `.gitignore` hinzufügen. Ein .gitignore-Beispiel findet sich in diesem Repository unter `.gitignore`.
 
+## Einstellungen anpassen
+Für viele kleinere Projekte ist nicht davon auszugehen, dass sich darum einen Community bilden wird. Die Veröffentlichung dient dabei eher der Transparenz als der Nutzbarmachung. Daher kann man sich überlegen, ob man folgende Optionen in den Projekteinstellungen (Github-Settings > Options) auszuschaltet:
+
+- **Wikis**: Eher für die ausführliche Projektdokumentation gedacht. 
+- **Issues**: Benutzer und Kollegen können Fehler melden und sich Funktionen wünschen.
+- **Projects**: Kanban-Board, Todos und Milestones für größere Projekte.  
+
+Wenn man diese Optionen aktiviert, sollte man auch bereit sein, Zeit in die Bearbeitung von Benutzerwünschen und Bugs zu investieren.
+
 ## Gute Beispiele
 
 - [SRF Data](https://github.com/srfdata/)
 - [Correctiv!](https://github.com/correctiv/)
-
-

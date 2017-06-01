@@ -9,7 +9,7 @@ _„Open Source ist kein Dogma, sondern eine partizipative Kultur der Offenheit 
   * [Zielgruppe definieren](#zielgruppe-definieren)
   * [Deutsch oder Englisch?](#deutsch-oder-englisch)
   * [README schreiben](#readme-schreiben)
-  * [Badges](#badges)
+  * [Badges](#badges-hinzufügen)
   * [Lizenz hinzufügen](#lizenz-hinzufügen)
   * [Projekt veröffentlichen](#projekt-veröffentlichen)
   * [Lokales Projekt anpassen](#lokales-projekt-anpassen)
@@ -18,9 +18,10 @@ _„Open Source ist kein Dogma, sondern eine partizipative Kultur der Offenheit 
   * [Passwörter entfernen](#passwörter-entfernen)
   * [Einstellungen anpassen](#einstellungen-anpassen)
   * [Gute Beispiele](#gute-beispiele)
+  * [Kontakt](#kontakt)
 
 ## Unterschiedliche Projektarten
-Verschieden Projekte stellen unterschiedliche Anforderungen an die Veröffentlichung. Oftmals überschneiden sich die Projektarten auch oder sind am besten in einem Repository zusammenzufassen:
+Verschieden Projekte stellen unterschiedliche Anforderungen an die Veröffentlichung. Oftmals überschneiden sich die Projektarten und lassen sich auch in einem Repository zusammenzufassen:
 
 - **Datenanalysen:** Bei Datenanalysen geht es vor allem darum, die einzelnen Schritte der Analyse transparent und reproduzierbar gestalten.
 - **Datensätze:** Es sollten vor allem Datensätze veröffentlicht werden, die anderweitig schwer zu bekommen sind. Zum Beispiel Datensätze, die von einer Behördenseite befreit wurden (z.B. durch einen Scraper). Wichtig: Urheberrechte abklären.
@@ -56,7 +57,7 @@ Die Readme-Datei ist der zentrale Einstiegspunkt in ein jedes Projekt. Ein gut g
 
 **Wann sollte ich damit anfangen, ein Readme zu schreiben?** Am besten sofort. Eigentlich sollte man alle Funktionen, die man neu hinzufügt, gleich dokumentieren. Das ist deutlich einfacher, als sich am Ende des Projektes nochmal über alle Funktionen Gedanken machen zu müssen. Außerdem merkt man beim Dokumentieren schnell, ob eine Funktion sinnvoll definiert ist (selbsterklärende Schnittstelle, Abstraktionsniveau).    
 
-## Badges
+## Badges hinzufügen
 Sehr beliebt sind sogenannte Badges oder Shields. Sie zeigen bestimmte Projektinformationen, wie die Lizenz, der Build-Status oder die Zahl der Issues, direkt in der README an. Ein vollständige Übersicht findet sich bei [Shields.io](https://shields.io/). Dort kann mit wenigen Klicks Badges für verschiedene Zwecke selbst erzeugen. 
 
 Beispiele aus dem [elasticsearch-frontend](https://github.com/br-data/elasticsearch-frontend):
@@ -181,7 +182,7 @@ $ git push
 **Vorsorge:** Um zu verhindern, dass sensible Daten eingecheckt werden, sollte man vorsichtig mit globalen Kommandos wie `git add -A` umgehen. Besser ist es, Dateien einzeln zu einem Commit hinzuzufügen. Auf jeden Fall sollten vor einem Commit noch einmal die vorgeschlagenen (staged) Dateien angeschaut werden: `git status`. Um ein versehentliches Einchecken zu verhindern, kann man sensible Konfigurationsdateien auch zur `.gitignore` hinzufügen. Ein .gitignore-Beispiel findet sich in diesem Repository unter `.gitignore`.
 
 ## Einstellungen anpassen
-Für viele kleinere Projekte ist nicht davon auszugehen, dass sich darum einen Community bilden wird. Die Veröffentlichung dient dabei eher der Transparenz als der Nutzbarmachung. Daher kann man sich überlegen, ob man folgende Optionen in den Projekteinstellungen (Github-Settings > Options) auszuschaltet:
+Für viele kleinere Projekte ist nicht davon auszugehen, dass sich darum einen Community bilden wird. Die Veröffentlichung dient dabei eher der Transparenz als der Nutzbarmachung. Daher kann man sich überlegen, ob man folgende Optionen in den Projekteinstellungen (Github-Settings > Options) auszuschalten:
 
 - **Wikis**: Eher für die ausführliche Projektdokumentation gedacht. 
 - **Issues**: Benutzer und Kollegen können Fehler melden und sich Funktionen wünschen.
@@ -190,6 +191,14 @@ Für viele kleinere Projekte ist nicht davon auszugehen, dass sich darum einen C
 Wenn man diese Optionen aktiviert, sollte man auch bereit sein, Zeit in die Bearbeitung von Benutzerwünschen und Bugs zu investieren.
 
 ## Gute Beispiele
+Gute Beispiele, wie man als Nachrichtenorganisation Daten und Analysen veröffentlichen kann, finden sich bei:
 
-- [SRF Data](https://github.com/srfdata/)
-- [Correctiv!](https://github.com/correctiv/)
+- [SRF Data auf Github](https://github.com/srfdata/)
+- [Correctiv! auf Github](https://github.com/correctiv/)
+
+## Kontakt
+[BR Data](http://br.de/data/) ist das datenjournalistische Team des [Bayerischen Rundfunks](http://br.de/). Es setzt sich zusammen aus Journalisten, Codern und Designern. Wir haben uns auf daten- und dokumentengetriebene Recherche und ihre Umsetzung in interaktiven Anwendungen und im crossmedialen Umfeld spezialisiert.#
+
+Wir freuen uns über Fragen, Kritik oder Anregungen:
+- BR Data auf Twitter [@br_data](https://twitter.com/br_data/)
+- BR Data per [E-Mail](mailto:data@br.de) kontaktieren

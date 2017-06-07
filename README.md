@@ -9,14 +9,14 @@ _„Open Source ist kein Dogma, sondern eine partizipative Kultur der Offenheit 
   * [Zielgruppe definieren](#zielgruppe-definieren)
   * [Deutsch oder Englisch?](#deutsch-oder-englisch)
   * [README schreiben](#readme-schreiben)
-  * [Badges](#badges-hinzufügen)
-  * [Lizenz hinzufügen](#lizenz-hinzufügen)
-  * [Projekt veröffentlichen](#projekt-veröffentlichen)
-  * [Lokales Projekt anpassen](#lokales-projekt-anpassen)
   * [Dokumentation und Kommentare](#dokumentation-und-kommentare)
   * [Commit-Messages](#commit-messages)
   * [Passwörter entfernen](#passwörter-entfernen)
+  * [Badges](#badges-hinzufügen)
+  * [Lizenz hinzufügen](#lizenz-hinzufügen)
   * [Einstellungen anpassen](#einstellungen-anpassen)
+  * [Projekt veröffentlichen](#projekt-veröffentlichen)
+  * [Lokales Projekt anpassen](#lokales-projekt-anpassen)
   * [Gute Beispiele](#gute-beispiele)
   * [Kontakt](#kontakt)
 
@@ -56,62 +56,6 @@ Die Readme-Datei ist der zentrale Einstiegspunkt in ein jedes Projekt. Ein gut g
 **Wie umfangreich sollte das Readme sein?** In das Readme gehören alle Informationen, die unmittelbar notwendig sind, um das Projekt zu verwenden. Details, wie man eine bestimmte Datenbank aufsetzt, muss man nicht ausführen. Hier reicht ein Link oder zumindest der Hinweis, dass die Installation einer bestimmten Datenbank vorausgesetzt wird (Stichwort Anforderungen).
 
 **Wann sollte ich damit anfangen, ein Readme zu schreiben?** Am besten sofort. Eigentlich sollte man alle Funktionen, die man neu hinzufügt, gleich dokumentieren. Das ist deutlich einfacher, als sich am Ende des Projektes nochmal über alle Funktionen Gedanken machen zu müssen. Außerdem merkt man beim Dokumentieren schnell, ob eine Funktion sinnvoll definiert ist (selbsterklärende Schnittstelle, Abstraktionsniveau).    
-
-## Badges hinzufügen
-Sehr beliebt sind sogenannte Badges oder Shields. Sie zeigen bestimmte Projektinformationen, wie die Lizenz, der Build-Status oder die Zahl der Issues, direkt in der README an. Ein vollständige Übersicht findet sich bei [Shields.io](https://shields.io/). Dort kann mit wenigen Klicks Badges für verschiedene Zwecke selbst erzeugen. 
-
-Beispiele aus dem [elasticsearch-frontend](https://github.com/br-data/elasticsearch-frontend):
-
-[![License](https://img.shields.io/github/license/br-data/elasticsearch-frontend.svg?style=flat-square)]() [![GitHub release](https://img.shields.io/github/release/br-data/elasticsearch-frontend.svg?style=flat-square)]() [![GitHub issues](https://img.shields.io/github/issues/br-data/elasticsearch-frontend.svg?style=flat-square)]()
-
-Man sollte sich aber genau überlegen, welche Badges wirklich Sinn machen. Die meisten Informationen sieht man in Github auch so auf einen Blick und mehr als fünf Badges wirken eher unseriös (siehe Heckscheibenaufkleber).
-
-## Lizenz hinzufügen
-Damit andere Benutzer den Code für ihre eigenen Projekte nutzen können, braucht das Repository eine Lizenz:
-
-1. Auf der Github-Projektseite **Create new file** auswählen.
-2. Als Name der Datei `LICENSE` eingeben.
-3. Vorlage **MIT** aus der Liste rechts auswählen.
-4. Copyright-Zeile in `Copyright (c) 2017 Bayerischer Rundfunk` ändern.
-5. Unten auf der Seite eine Commit-Beschreibung `Add license` eingeben und bestätigen.
-
-**Warnung:** Wichtig ist, dass die Urheberrechte für alle im Repository enthaltene Inhalte (Code, Text, Daten, Schriften, Bilder ...) beim Bayerischen Rundfunk liegen. Fremdinhalte wie Software-Bibliotheken sollten immer über einen Paketmanager – wie beispielsweise [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/) oder [pip](https://pypi.python.org/) – installiert werden.
-
-Eine Beispiel-Lizenz (MIT) findet sich in diesem Repository unter `LICENSE`.
-
-## Projekt veröffentlichen
-Das Veröffentlichen geschieht über die Github-Settings > Options:
-
-1. Projekt veröffentlich: **Make this repository public**
-2. Eigentumsrechte auf `br-data` übertragen: **Transfer ownership**
-
-Das Übertragen der Eigentumsrechte kann einige Minuten dauern.
-
-## Lokales Projekt anpassen
-Wenn man das Repository bereits aus dem eigenen Rechner ausgecheckt hat, muss man den Remote-URL anpassen. Vergisst man die die Remote-URL anzupassen kann man nicht mehr Pushen und Pullen. Die neue URL bekommt man, indem man auf der Github-Projektseite auf **Clone or download** geht. Es empfiehlt sich immer den SSH-Link zu kopieren (statt des HTTPS-Links).
-
-**In Github Desktop**
-
-1. In der rechten oberen Ecke auf *Settings (⚙️) > Repository Settings...* gehen
-2. In der Sidebar *Remote* auswählen
-3. Im Feld *Primary remote repository* die URL austauschen
-4. Mit *Ok* bestätigen und versuchsweise synchronisieren
-
-**Kommandozeile**
-
-Die Remote-URL kann man auch mit folgendem Kommandozeilenbefehl ändern:
-
-```
-$ git remote set-url origin git@github.com:br-data/mein-repo.git
-```
-
-Um zu überprüfen, ob die Änderung geklappt hat, kann man sich die Remote-URL mit folgendem Befehl anschauen:
-
-```
-$ git remote -v
-origin  git@github.com:br-data/mein-repo.git (fetch)
-origin  git@github.com:br-data/mein-repo.git (push)
-```
 
 ## Dokumentation und Kommentare
 Die Dokumentation im Code sollte zielführend und dem Umfang des Projekts angemessen sein. Am wichtigsten sind aber sprechende Variablen-, Funktions- und Klassennamen. Wenn eine Funktion `toDashCase(string)` heißt, muss man eigentlich nicht mehr viel kommentieren. Oft ist es wichtiger die zu erwartenden Parameter zu beschreiben. Hier sollte man gängige Konventionen wie [JSDoc](http://usejsdoc.org/) oder [pydoc](https://docs.python.org/2/library/pydoc.html) befolgen:
@@ -181,6 +125,28 @@ $ git push
 
 **Vorsorge:** Um zu verhindern, dass sensible Daten eingecheckt werden, sollte man vorsichtig mit globalen Kommandos wie `git add -A` umgehen. Besser ist es, Dateien einzeln zu einem Commit hinzuzufügen. Auf jeden Fall sollten vor einem Commit noch einmal die vorgeschlagenen (staged) Dateien angeschaut werden: `git status`. Um ein versehentliches Einchecken zu verhindern, kann man sensible Konfigurationsdateien auch zur `.gitignore` hinzufügen. Ein .gitignore-Beispiel findet sich in diesem Repository unter `.gitignore`.
 
+## Badges hinzufügen
+Sehr beliebt sind sogenannte Badges oder Shields. Sie zeigen bestimmte Projektinformationen, wie die Lizenz, der Build-Status oder die Zahl der Issues, direkt in der README an. Ein vollständige Übersicht findet sich bei [Shields.io](https://shields.io/). Dort kann mit wenigen Klicks Badges für verschiedene Zwecke selbst erzeugen. 
+
+Beispiele aus dem [elasticsearch-frontend](https://github.com/br-data/elasticsearch-frontend):
+
+[![License](https://img.shields.io/github/license/br-data/elasticsearch-frontend.svg?style=flat-square)]() [![GitHub release](https://img.shields.io/github/release/br-data/elasticsearch-frontend.svg?style=flat-square)]() [![GitHub issues](https://img.shields.io/github/issues/br-data/elasticsearch-frontend.svg?style=flat-square)]()
+
+Man sollte sich aber genau überlegen, welche Badges wirklich Sinn machen. Die meisten Informationen sieht man in Github auch so auf einen Blick und mehr als fünf Badges wirken eher unseriös (siehe Heckscheibenaufkleber).
+
+## Lizenz hinzufügen
+Damit andere Benutzer den Code für ihre eigenen Projekte nutzen können, braucht das Repository eine Lizenz:
+
+1. Auf der Github-Projektseite **Create new file** auswählen.
+2. Als Name der Datei `LICENSE` eingeben.
+3. Vorlage **MIT** aus der Liste rechts auswählen.
+4. Copyright-Zeile in `Copyright (c) 2017 Bayerischer Rundfunk` ändern.
+5. Unten auf der Seite eine Commit-Beschreibung `Add license` eingeben und bestätigen.
+
+**Warnung:** Wichtig ist, dass die Urheberrechte für alle im Repository enthaltene Inhalte (Code, Text, Daten, Schriften, Bilder ...) beim Bayerischen Rundfunk liegen. Fremdinhalte wie Software-Bibliotheken sollten immer über einen Paketmanager – wie beispielsweise [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/) oder [pip](https://pypi.python.org/) – installiert werden.
+
+Eine Beispiel-Lizenz (MIT) findet sich in diesem Repository unter `LICENSE`.
+
 ## Einstellungen anpassen
 Für viele kleinere Projekte ist nicht davon auszugehen, dass sich darum einen Community bilden wird. Die Veröffentlichung dient dabei eher der Transparenz als der Nutzbarmachung. Daher kann man sich überlegen, ob man folgende Optionen in den Projekteinstellungen (Github-Settings > Options) auszuschalten:
 
@@ -189,6 +155,40 @@ Für viele kleinere Projekte ist nicht davon auszugehen, dass sich darum einen C
 - **Projects**: Kanban-Board, Todos und Milestones für größere Projekte.  
 
 Wenn man diese Optionen aktiviert, sollte man auch bereit sein, Zeit in die Bearbeitung von Benutzerwünschen und Bugs zu investieren.
+
+## Projekt veröffentlichen
+Das Veröffentlichen geschieht über die Github-Settings > Options:
+
+1. Projekt veröffentlich: **Make this repository public**
+2. Eigentumsrechte auf `br-data` übertragen: **Transfer ownership**
+
+Das Übertragen der Eigentumsrechte kann einige Minuten dauern.
+
+## Lokales Projekt anpassen
+Wenn man das Repository bereits aus dem eigenen Rechner ausgecheckt hat, muss man den Remote-URL anpassen. Vergisst man die die Remote-URL anzupassen kann man nicht mehr Pushen und Pullen. Die neue URL bekommt man, indem man auf der Github-Projektseite auf **Clone or download** geht. Es empfiehlt sich immer den SSH-Link zu kopieren (statt des HTTPS-Links).
+
+**In Github Desktop**
+
+1. In der rechten oberen Ecke auf *Settings (⚙️) > Repository Settings...* gehen
+2. In der Sidebar *Remote* auswählen
+3. Im Feld *Primary remote repository* die URL austauschen
+4. Mit *Ok* bestätigen und versuchsweise synchronisieren
+
+**Kommandozeile**
+
+Die Remote-URL kann man auch mit folgendem Kommandozeilenbefehl ändern:
+
+```
+$ git remote set-url origin git@github.com:br-data/mein-repo.git
+```
+
+Um zu überprüfen, ob die Änderung geklappt hat, kann man sich die Remote-URL mit folgendem Befehl anschauen:
+
+```
+$ git remote -v
+origin  git@github.com:br-data/mein-repo.git (fetch)
+origin  git@github.com:br-data/mein-repo.git (push)
+```
 
 ## Gute Beispiele
 Gute Beispiele, wie man als Nachrichtenorganisation Daten und Analysen veröffentlichen kann, finden sich bei:

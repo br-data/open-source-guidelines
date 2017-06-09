@@ -25,22 +25,17 @@ Verschieden Projekte stellen unterschiedliche Anforderungen an die Veröffentlic
 
 - **Datenanalysen:** Bei Datenanalysen geht es vor allem darum, die einzelnen Schritte der Analyse transparent und reproduzierbar gestalten.
 - **Datensätze:** Es sollten vor allem Datensätze veröffentlicht werden, die anderweitig schwer zu bekommen sind. Zum Beispiel Datensätze, die von einer Behördenseite befreit wurden (z.B. durch einen Scraper). Wichtig: Urheberrechte abklären.
-- **interaktive Grafiken:** Besondere interaktive Grafiken, welche mit hohem Aufwand erstellt wurden und die man auf andere Themen anwenden könnte. Beispiel: Netzwerk-Visualisierungen. 
-- **Tools:** Allgemeine Werkzeuge, die bei einem bestimmten verallgemeinerbaren Workflow helfen. Beispiel: PDFs herunterladen, in Text umwandeln, in eine Datenbank importieren. Dabei geht es vor allem darum, häufige Aufgaben zu automatisieren.
-- **(Web-)Anwendungen:** Größere Software-Projekte, die einen verallgemeinerbaren Nutzen haben. 
+- **interaktive Grafiken:** Auch interaktive Grafiken und Anwendungen, welche man auf ein anderes Themen anwenden könnte und die aufwändig erstellt wurden, sollten veröffentlicht werden. Beispiel: Wahlkarten, Netzwerk-Visualisierungen. 
+- **Tools:** Allgemeine Werkzeuge, die bei einem bestimmten, verallgemeinerbaren, Workflow helfen. Beispiel: PDFs herunterladen, in Text umwandeln, in eine Datenbank importieren. Dabei geht es vor allem darum, häufige Aufgaben zu automatisieren.
+- **(Web-)Anwendungen:** Größere, aufwendige Software-Projekte, die einen verallgemeinerbaren Nutzen haben. 
 
 ## Zielgruppe definieren
-Vor allem für das Readme und die Dokumentation ist es wichtig, sich zu überlegen, für wen man eigentlich schreibt. Generell hilft es immer, von sich selbst in zwei Jahren oder einem Kollegen, der noch nichts mit dem Projekt zu tun hatte, auszugehen. Die Person beherrscht zwar die Grundlagen der Programmierung oder Datenanalyse, weiß aber nichts (mehr) über die Eigenheiten und Details des Projekts. Es macht wenig Sinn, Software- oder Datenanalyseprojekte so zu dokumentieren, dass eine absoluter Laie sie verstehen würde.
-
-## Deutsch oder Englisch?
-Grundsätzlich empfiehlt sich, alles in Englisch zu dokumentieren. Wenn ein Projekt aber ein ausschließlich deutsches Thema behandelt, kann man aber zumindest die README in Deutsch verfassen. Eine besondere Schwierigkeit ist die Übersetzung von deutschen Behördennamen oder Rechtsbegriffen. Im Fall von *Einspeisevergütung* bespielsweise bietet es sich an, den Originalbegriff und eine Übersetzung zu verwenden: *feed-in tariffs (Einspeisevergütung)*.
-
-Die Dokumentation im Code selbst, sowie Variablen- und Funktionsnamen, sollten eigentlich immer englisch sein. Allerdings gilt auch hier die Ausnahme für Behördennamen und Rechtsbegriffen.
+Vor allem für das Readme und die Dokumentation ist es wichtig, sich zu überlegen, für wen man eigentlich schreibt. Generell hilft es immer, von sich selbst in zwei Jahren, oder einem Kollegen, der noch nichts mit dem Projekt zu tun hatte, auszugehen. Die Person beherrscht zwar die Grundlagen der Programmierung oder Datenanalyse, weiß aber nichts (mehr) über die Eigenheiten und Details des Projekts. Es macht wenig Sinn, Software- oder Datenanalyseprojekte so zu dokumentieren, dass selbst eine absoluter Laie sie verstehen kann.
 
 ## README schreiben
 Eine Vorlage für ein typische README-Datei findet sich hier: [README.template.md](https://github.com/digitalegarage/open-source-guidelines/blob/master/README.template.md)
 
-Die Readme-Datei ist der zentrale Einstiegspunkt in ein jedes Projekt. Ein gut geschriebenes Readme erleichtert den Einstieg in ein Projekt und vermittelt Kompetenz und Ernsthaftigkeit. Im Idealfall umfasst das Readme:  
+Die Readme-Datei ist die zentrale Quelle für Dokumentation und Informationen über ein Projekt. Ein gut geschriebenes Readme erleichtert den Einstieg in ein Projekt und vermittelt Kompetenz und Ernsthaftigkeit. Im Idealfall umfasst das Readme:  
 
 - **Projekttitel:** Um was geht es bei dem Projekt?
 - **Projektbeschreibung:** Welche Funktionen oder Erkenntnisse (bei Analysen) bietet das Projekt? Was macht das Projekt besonders?
@@ -55,7 +50,11 @@ Die Readme-Datei ist der zentrale Einstiegspunkt in ein jedes Projekt. Ein gut g
 
 **Wie umfangreich sollte das Readme sein?** In das Readme gehören alle Informationen, die unmittelbar notwendig sind, um das Projekt zu verwenden. Details, wie man eine bestimmte Datenbank aufsetzt, muss man nicht ausführen. Hier reicht ein Link oder zumindest der Hinweis, dass die Installation einer bestimmten Datenbank vorausgesetzt wird (Stichwort Anforderungen).
 
-**Wann sollte ich damit anfangen, ein Readme zu schreiben?** Am besten sofort. Eigentlich sollte man alle Funktionen, die man neu hinzufügt, gleich dokumentieren. Das ist deutlich einfacher, als sich am Ende des Projektes nochmal über alle Funktionen Gedanken machen zu müssen. Außerdem merkt man beim Dokumentieren schnell, ob eine Funktion sinnvoll definiert ist (selbsterklärende Schnittstelle, Abstraktionsniveau).    
+**Wann sollte ich damit anfangen, ein Readme zu schreiben?** Am besten sofort. Eigentlich sollte man alle Funktionen, die man neu hinzufügt, gleich dokumentieren. Das ist deutlich einfacher, als sich am Ende des Projektes nochmal über alle Funktionen Gedanken machen zu müssen. Außerdem merkt man beim Dokumentieren schnell, ob eine Funktion sinnvoll definiert ist (selbsterklärende Schnittstelle, Abstraktionsniveau).
+
+**Deutsch oder Englisch?** Grundsätzlich empfiehlt sich, alles in Englisch zu dokumentieren. Wenn ein Projekt aber ein ausschließlich deutsches Thema behandelt, kann man aber zumindest die README in Deutsch verfassen. Eine besondere Schwierigkeit ist die Übersetzung von deutschen Behördennamen oder Rechtsbegriffen. Im Fall von *Einspeisevergütung* bespielsweise bietet es sich an, den Originalbegriff und eine Übersetzung zu verwenden: *feed-in tariffs (Einspeisevergütung)*.
+
+Die Dokumentation im Code, sowie Variablen- und Funktionsnamen, sollten eigentlich immer englisch sein. Allerdings gilt auch hier die Ausnahme für Behördennamen und Rechtsbegriffen.
 
 ## Dokumentation und Kommentare
 Die Dokumentation im Code sollte zielführend und dem Umfang des Projekts angemessen sein. Am wichtigsten sind aber sprechende Variablen-, Funktions- und Klassennamen. Wenn eine Funktion `toDashCase(string)` heißt, muss man eigentlich nicht mehr viel kommentieren. Oft ist es wichtiger die zu erwartenden Parameter zu beschreiben. Hier sollte man gängige Konventionen wie [JSDoc](http://usejsdoc.org/) oder [pydoc](https://docs.python.org/2/library/pydoc.html) befolgen:
@@ -72,6 +71,8 @@ function toDashCase(string) {
 ```
 
 Für **Datenanalysen** empfiehlt es sich [Jupyter Notebooks](https://jupyter.org/) oder [R Markdown](http://rmarkdown.rstudio.com/) zu verwenden.
+
+**Deutsch oder Englisch?**
 
 ## Commit-Messages
 Beim Veröffentlichen des Repositories wird auch der ganze Commit-Verlauf nach außen hin sichtbar. Das sollte eine Motivation sein, sich auch in Zukunft besonders viel Mühe bei den Commit-Messages zu geben. Gute Commit-Messages beginnen mit einem Verb (Imperativ Präsens, erster Buchstabe großgeschrieben) und sind nicht länger als 50 Zeichen. Außerdem braucht man am Ende der Commit-Message keinen Punkt zu setzen.

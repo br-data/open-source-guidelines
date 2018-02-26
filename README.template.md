@@ -60,7 +60,7 @@ Bilder können nach dem gleichen Prinzip eingebunden werden. Einziger Unterschie
 ![Github-Logo](https://de.wikipedia.org/wiki/Datei:GitHub_logo_2013.svg)
 
 ### Code
-Unformatierte Codefragmente können im Paragraphen mit Backticks ``this.function()`` angezeigt werden oder als ganze Code-Blöcke mit drei Backticks in der ersten und letzten Zeile. Für passendes Syntax-Highlighting muss in der ersten Zeile die Skriptsprache angegeben werden ````javascript`.
+Unformatierte Codefragmente können im Paragraphen mit Backticks `this.function()` angezeigt werden oder als ganze Code-Blöcke mit drei Backticks in der ersten und letzten Zeile. Für passendes Syntax-Highlighting muss in der ersten Zeile die Skriptsprache angegeben werden `javascript`.
 
 Beispiel:
 

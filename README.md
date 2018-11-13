@@ -72,8 +72,6 @@ function toDashCase(string) {
 
 Für **Datenanalysen** empfiehlt es sich [Jupyter Notebooks](https://jupyter.org/) oder [R Markdown](http://rmarkdown.rstudio.com/) zu verwenden.
 
-**Deutsch oder Englisch?**
-
 ## Commit-Messages
 Beim Veröffentlichen des Repositories wird auch der ganze Commit-Verlauf nach außen hin sichtbar. Das sollte eine Motivation sein, sich auch in Zukunft besonders viel Mühe bei den Commit-Messages zu geben. Gute Commit-Messages beginnen mit einem Verb (Imperativ Präsens, erster Buchstabe großgeschrieben) und sind nicht länger als 50 Zeichen. Außerdem braucht man am Ende der Commit-Message keinen Punkt zu setzen.
 
@@ -198,7 +196,7 @@ Gute Beispiele, wie man als Nachrichtenorganisation Daten und Analysen veröffen
 - [Correctiv! auf Github](https://github.com/correctiv/)
 
 ## Kontakt
-[BR Data](http://br.de/data/) ist das datenjournalistische Team des [Bayerischen Rundfunks](http://br.de/). Es setzt sich zusammen aus Journalisten, Codern und Designern. Wir haben uns auf daten- und dokumentengetriebene Recherche und ihre Umsetzung in interaktiven Anwendungen und im crossmedialen Umfeld spezialisiert.#
+[BR Data](http://br.de/data/) ist das datenjournalistische Team des [Bayerischen Rundfunks](http://br.de/). Es setzt sich zusammen aus Journalisten, Codern und Designern. Wir haben uns auf daten- und dokumentengetriebene Recherche und ihre Umsetzung in interaktiven Anwendungen und im crossmedialen Umfeld spezialisiert.
 
 Wir freuen uns über Fragen, Kritik oder Anregungen:
 - BR Data auf Twitter [@br_data](https://twitter.com/br_data/)

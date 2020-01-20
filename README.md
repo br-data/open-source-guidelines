@@ -38,17 +38,17 @@ Vor allem für das Readme und die Dokumentation ist es wichtig, sich zu überleg
 
 ## Projekt benennen
 
-Dinge zu kurz und verständlich zu benennen ist eine der größten Herausforderungen, vor allem wenn es um ein neues Github-Repository geht. Wir benennen unsere Repositories nach folgendem Schema:
+Dinge kurz und verständlich zu benennen ist eine Herausforderung, vor allem wenn es dabei um den Namen eines neuen Github-Repositories geht. Wir benennen unsere Repositories nach folgendem Schema:
 
 ```text
 (jahr)-titel-typ
 ```
 
-Projekte bekommen nur dann eine Jahreszahl, wenn sie in einem bestimmten Jahr abgeschlossen wurden und nicht weiterentwickelt werden. Meistens sind das Datenanalysen und Recherchen.
+Projekte bekommen nur dann eine **Jahreszahl**, wenn sie in einem bestimmten Jahr abgeschlossen und veröffentlicht wurden. Meistens sind das Datenanalysen oder Recherchen. Anleitungen, Services und Werkzeuge bekommen keine Jahreszahl, da sie laufen weiterentwickelt werden.
 
-Der Titel sollte sprechend sein und das Thema möglichst kurz und genau beschreiben. Der Titel kann mehrere Wörter enthalten, diese sollten jedoch ebenfalls kleingeschrieben und durch einen Bindestrich getrennt werden.
+Der **Titel** sollte sprechend sein und das Thema möglichst kurz und genau beschreiben. Der Titel kann mehrere Wörter enthalten, diese sollten jedoch ebenfalls kleingeschrieben und durch einen Bindestrich getrennt werden.
 
-Als letztes wird der Typ des Repositories angegeben. Gute Suffixe sind:
+Als letztes wird der **Typ des Repositories** angegeben. Gute Suffixe sind:
 
 - **-analyse**: Datenanalyse oder -auswertung
 - **-longread**: Artikel mit interaktiven Elementen
@@ -57,6 +57,12 @@ Als letztes wird der Typ des Repositories angegeben. Gute Suffixe sind:
 - **-service**: API oder Micro-Service
 - **-tool**: Werkzeug, um eine bestimmte Aufgabe zu lösen
 - **-guide**: Anleitung, um etwas zu tun
+
+Beispiele für gute Repository-Namen:
+
+- **2019-db-aufzuege-analyse**: Abgeschlossene Analyse der ausgefallenen Aufzüge an Bahnhöfen der Deutschen Bahn.
+- **waffenexporte-libyen-analyse**: Laufende Analyse von Waffenexporten nach Libyen.
+- **elasticsearch-import-tools**: Mehrere Werkzeuge um Daten in Elasticsearch zu importieren.
 
 ## README schreiben
 

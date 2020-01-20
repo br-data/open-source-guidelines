@@ -52,6 +52,7 @@ Als letztes wird der **Typ des Repositories** angegeben. Gute Suffixe sind:
 
 - **-analyse**: Datenanalyse oder -auswertung
 - **-longread**: Artikel mit interaktiven Elementen
+- **-chart**: Grafik oder Datenvisualisierung
 - **-website**: Webseite mit mehren Seiten
 - **-data**: Sammlung an (Roh-)Daten ohne Skripte
 - **-service**: API oder Micro-Service

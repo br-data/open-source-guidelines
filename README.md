@@ -1,38 +1,47 @@
 # Open Source bei BR Data
-Ein paar Empfehlungen zum Veröffentlichen von bestehenden Projekten auf Github. Grundsätzlich versuchen wir, alle Projekte zu veröffentlichen, die es unseren Benutzen ermöglichen, Rechercheweg und Datenanalyse hinter einer Geschichte zu verstehen und zu verifizieren (Transparenz). Wir sind bereit, zu unseren Fehlern zu stehen und sie gegebenenfalls auszubessern. Im Idealfall können die von uns entwickelten Programme und Analysen von der Datenjournalismus-Community weiter genutzt und verbessert werden. 
 
-_„Open Source ist kein Dogma, sondern eine partizipative Kultur der Offenheit und des Teiles. Denn am Ende konkurrieren wir (Journalisten) nicht um das beste Werkzeug, sondern um die beste Geschichte.“_
+Ein paar Empfehlungen zum Veröffentlichen von bestehenden Projekten auf Github. Grundsätzlich versuchen wir, alle Projekte zu veröffentlichen, die es unseren Benutzen ermöglichen, Rechercheweg und Datenanalyse hinter einer Geschichte zu verstehen und zu verifizieren (Transparenz). Wir sind bereit, zu unseren Fehlern zu stehen und sie gegebenenfalls auszubessern. Im Idealfall können die von uns entwickelten Programme und Analysen von der Datenjournalismus-Community weiter genutzt und verbessert werden.
+
+*„Open Source ist kein Dogma, sondern eine partizipative Kultur der Offenheit und des Teiles. Denn am Ende konkurrieren wir (Journalisten) nicht um das beste Werkzeug, sondern um die beste Geschichte.“*
 
 ## Inhalt
 
-  * [Unterschiedliche Projektarten](#unterschiedliche-projektarten)
-  * [Zielgruppe definieren](#zielgruppe-definieren)
-  * [Deutsch oder Englisch?](#deutsch-oder-englisch)
-  * [README schreiben](#readme-schreiben)
-  * [Dokumentation und Kommentare](#dokumentation-und-kommentare)
-  * [Commit-Messages](#commit-messages)
-  * [Passwörter entfernen](#passwörter-entfernen)
-  * [Badges](#badges-hinzufügen)
-  * [Lizenz hinzufügen](#lizenz-hinzufügen)
-  * [Einstellungen anpassen](#einstellungen-anpassen)
-  * [Projekt veröffentlichen](#projekt-veröffentlichen)
-  * [Lokales Projekt anpassen](#lokales-projekt-anpassen)
-  * [Gute Beispiele](#gute-beispiele)
-  * [Kontakt](#kontakt)
+- [Unterschiedliche Projektarten](#unterschiedliche-projektarten)
+- [Zielgruppe definieren](#zielgruppe-definieren)
+- [Deutsch oder Englisch?](#deutsch-oder-englisch)
+- [Projekt benennen](#projekt-benennen)
+- [README schreiben](#readme-schreiben)
+- [Dokumentation und Kommentare](#dokumentation-und-kommentare)
+- [Commit-Messages](#commit-messages)
+- [Passwörter entfernen](#passwörter-entfernen)
+- [Badges](#badges-hinzufügen)
+- [Lizenz hinzufügen](#lizenz-hinzufügen)
+- [Einstellungen anpassen](#einstellungen-anpassen)
+- [Projekt veröffentlichen](#projekt-veröffentlichen)
+- [Lokales Projekt anpassen](#lokales-projekt-anpassen)
+- [Gute Beispiele](#gute-beispiele)
+- [Kontakt](#kontakt)
 
 ## Unterschiedliche Projektarten
+
 Verschieden Projekte stellen unterschiedliche Anforderungen an die Veröffentlichung. Oftmals überschneiden sich die Projektarten und lassen sich auch in einem Repository zusammenzufassen:
 
 - **Datenanalysen:** Bei Datenanalysen geht es vor allem darum, die einzelnen Schritte der Analyse transparent und reproduzierbar gestalten.
 - **Datensätze:** Es sollten vor allem Datensätze veröffentlicht werden, die anderweitig schwer zu bekommen sind. Zum Beispiel Datensätze, die von einer Behördenseite befreit wurden (z.B. durch einen Scraper). Wichtig: Urheberrechte abklären.
 - **interaktive Grafiken:** Auch interaktive Grafiken und Anwendungen, welche man auf ein anderes Themen anwenden könnte und die aufwändig erstellt wurden, sollten veröffentlicht werden. Beispiel: Wahlkarten, Netzwerk-Visualisierungen. 
 - **Tools:** Allgemeine Werkzeuge, die bei einem bestimmten, verallgemeinerbaren, Workflow helfen. Beispiel: PDFs herunterladen, in Text umwandeln, in eine Datenbank importieren. Dabei geht es vor allem darum, häufige Aufgaben zu automatisieren.
-- **(Web-)Anwendungen:** Größere, aufwendige Software-Projekte, die einen verallgemeinerbaren Nutzen haben. 
+- **(Web-)Anwendungen:** Größere, aufwendige Software-Projekte, die einen verallgemeinerbaren Nutzen haben.
 
 ## Zielgruppe definieren
+
 Vor allem für das Readme und die Dokumentation ist es wichtig, sich zu überlegen, für wen man eigentlich schreibt. Generell hilft es immer, von sich selbst in zwei Jahren, oder einem Kollegen, der noch nichts mit dem Projekt zu tun hatte, auszugehen. Die Person beherrscht zwar die Grundlagen der Programmierung oder Datenanalyse, weiß aber nichts (mehr) über die Eigenheiten und Details des Projekts. Es macht wenig Sinn, Software- oder Datenanalyseprojekte so zu dokumentieren, dass selbst eine absoluter Laie sie verstehen kann.
 
+## Projekt benennen
+
+
+
 ## README schreiben
+
 Eine Vorlage für ein typische README-Datei findet sich hier: [README.template.md](https://github.com/digitalegarage/open-source-guidelines/blob/master/README.template.md)
 
 Die Readme-Datei ist die zentrale Quelle für Dokumentation und Informationen über ein Projekt. Ein gut geschriebenes Readme erleichtert den Einstieg in ein Projekt und vermittelt Kompetenz und Ernsthaftigkeit. Im Idealfall umfasst das Readme:  
@@ -57,6 +66,7 @@ Die Readme-Datei ist die zentrale Quelle für Dokumentation und Informationen ü
 Die Dokumentation im Code, sowie Variablen- und Funktionsnamen, sollten eigentlich immer englisch sein. Allerdings gilt auch hier die Ausnahme für Behördennamen und Rechtsbegriffen.
 
 ## Dokumentation und Kommentare
+
 Die Dokumentation im Code sollte zielführend und dem Umfang des Projekts angemessen sein. Am wichtigsten sind aber sprechende Variablen-, Funktions- und Klassennamen. Wenn eine Funktion `toDashCase(string)` heißt, muss man eigentlich nicht mehr viel kommentieren. Oft ist es wichtiger die zu erwartenden Parameter zu beschreiben. Hier sollte man gängige Konventionen wie [JSDoc](http://usejsdoc.org/) oder [pydoc](https://docs.python.org/2/library/pydoc.html) befolgen:
 
 ```javascript
@@ -73,6 +83,7 @@ function toDashCase(string) {
 Für **Datenanalysen** empfiehlt es sich [Jupyter Notebooks](https://jupyter.org/) oder [R Markdown](http://rmarkdown.rstudio.com/) zu verwenden.
 
 ## Commit-Messages
+
 Beim Veröffentlichen des Repositories wird auch der ganze Commit-Verlauf nach außen hin sichtbar. Das sollte eine Motivation sein, sich auch in Zukunft besonders viel Mühe bei den Commit-Messages zu geben. Gute Commit-Messages beginnen mit einem Verb (Imperativ Präsens, erster Buchstabe großgeschrieben) und sind nicht länger als 50 Zeichen. Außerdem braucht man am Ende der Commit-Message keinen Punkt zu setzen.
 
 Beispiel:
@@ -82,41 +93,42 @@ $ git commit -m "Fix social media icon alignment in header"
 ```
 
 ## Passwörter entfernen
+
 Manchmal hat man versehentlich Passwörter, API-Keys oder andere vertrauliche Informationen in einem Repo eingecheckt. Diese sollte man unbedingt vor Veröffentlichung des Projektes entfernen. Am einfachsten geht das mit dem [BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/). Es empfiehlt sich, das Projekt vorher zu sichern. 
 
 Als erstes muss das Repository gespiegelt werden: 
 
-```
+```console
 $ git clone --mirror git@github.com:digitalegarage/mein-repo.git
 ```
 
 Möglichkeit A: Alle Dateien löschen die *id_rsa* oder *id_dsa* heißen:
 
-```
+```console
 $ bfg --delete-files id_{dsa,rsa} mein-repo.git
 ```
 
 Möglichkeit B: Alle Dateien nach Passwörtern aus einer Liste durchsuchen und mit `***REMOVED***` ersetzen:
 
-```
+```console
 $ bfg --replace-text passwords.txt mein-repo.git
 ```
 
 Um folgende Befehle auszuführen, muss man in das Verzeichnis wechseln:
 
-```
+```console
 $ cd mein-repo.git
 ```
 
 Alle Referenzen aktualisieren und alte Referenzen löschen:
 
-```
+```console
 $ git reflog expire --expire=now --all && git gc --prune=now --aggressive
 ```
 
 Referenzen pushen.
 
-```
+```console
 $ git push
 ```
 
@@ -125,6 +137,7 @@ $ git push
 **Vorsorge:** Um zu verhindern, dass sensible Daten eingecheckt werden, sollte man vorsichtig mit globalen Kommandos wie `git add -A` umgehen. Besser ist es, Dateien einzeln zu einem Commit hinzuzufügen. Auf jeden Fall sollten vor einem Commit noch einmal die vorgeschlagenen (staged) Dateien angeschaut werden: `git status`. Um ein versehentliches Einchecken zu verhindern, kann man sensible Konfigurationsdateien auch zur `.gitignore` hinzufügen. Ein .gitignore-Beispiel findet sich in diesem Repository unter `.gitignore`.
 
 ## Badges hinzufügen
+
 Sehr beliebt sind sogenannte Badges oder Shields. Sie zeigen bestimmte Projektinformationen, wie die Lizenz, der Build-Status oder die Zahl der Issues, direkt in der README an. Ein vollständige Übersicht findet sich bei [Shields.io](https://shields.io/). Dort kann mit wenigen Klicks Badges für verschiedene Zwecke selbst erzeugen. 
 
 Beispiele aus dem [elasticsearch-frontend](https://github.com/br-data/elasticsearch-frontend):
@@ -134,6 +147,7 @@ Beispiele aus dem [elasticsearch-frontend](https://github.com/br-data/elasticsea
 Man sollte sich aber genau überlegen, welche Badges wirklich Sinn machen. Die meisten Informationen sieht man in Github auch so auf einen Blick und mehr als fünf Badges wirken eher unseriös (siehe Heckscheibenaufkleber).
 
 ## Lizenz hinzufügen
+
 Damit andere Benutzer den Code für ihre eigenen Projekte nutzen können, braucht das Repository eine Lizenz:
 
 1. Auf der Github-Projektseite **Create new file** auswählen.
@@ -147,6 +161,7 @@ Damit andere Benutzer den Code für ihre eigenen Projekte nutzen können, brauch
 Eine Beispiel-Lizenz (MIT) findet sich in diesem Repository unter `LICENSE`.
 
 ## Einstellungen anpassen
+
 Für viele kleinere Projekte ist nicht davon auszugehen, dass sich darum einen Community bilden wird. Die Veröffentlichung dient dabei eher der Transparenz als der Nutzbarmachung. Daher kann man sich überlegen, ob man folgende Optionen in den Projekteinstellungen (Github-Settings > Options) auszuschalten:
 
 - **Wikis**: Eher für die ausführliche Projektdokumentation gedacht. 
@@ -156,6 +171,7 @@ Für viele kleinere Projekte ist nicht davon auszugehen, dass sich darum einen C
 Wenn man diese Optionen aktiviert, sollte man auch bereit sein, Zeit in die Bearbeitung von Benutzerwünschen und Bugs zu investieren.
 
 ## Projekt veröffentlichen
+
 Das Veröffentlichen geschieht über die Github-Settings > Options:
 
 1. Projekt veröffentlich: **Make this repository public**
@@ -164,40 +180,44 @@ Das Veröffentlichen geschieht über die Github-Settings > Options:
 Das Übertragen der Eigentumsrechte kann einige Minuten dauern.
 
 ## Lokales Projekt anpassen
+
 Wenn man das Repository bereits aus dem eigenen Rechner ausgecheckt hat, muss man den Remote-URL anpassen. Vergisst man die die Remote-URL anzupassen kann man nicht mehr Pushen und Pullen. Die neue URL bekommt man, indem man auf der Github-Projektseite auf **Clone or download** geht. Es empfiehlt sich immer den SSH-Link zu kopieren (statt des HTTPS-Links).
 
-**In Github Desktop**
+#### In Github Desktop
 
 1. In der rechten oberen Ecke auf *Settings (⚙️) > Repository Settings...* gehen
 2. In der Sidebar *Remote* auswählen
 3. Im Feld *Primary remote repository* die URL austauschen
 4. Mit *Ok* bestätigen und versuchsweise synchronisieren
 
-**Kommandozeile**
+#### Kommandozeile
 
 Die Remote-URL kann man auch mit folgendem Kommandozeilenbefehl ändern:
 
-```
+```console
 $ git remote set-url origin git@github.com:br-data/mein-repo.git
 ```
 
 Um zu überprüfen, ob die Änderung geklappt hat, kann man sich die Remote-URL mit folgendem Befehl anschauen:
 
-```
+```console
 $ git remote -v
 origin  git@github.com:br-data/mein-repo.git (fetch)
 origin  git@github.com:br-data/mein-repo.git (push)
 ```
 
 ## Gute Beispiele
+
 Gute Beispiele, wie man als Nachrichtenorganisation Daten und Analysen veröffentlichen kann, finden sich bei:
 
 - [SRF Data auf Github](https://github.com/srfdata/)
 - [Correctiv! auf Github](https://github.com/correctiv/)
 
 ## Kontakt
-[BR Data](http://br.de/data/) ist das datenjournalistische Team des [Bayerischen Rundfunks](http://br.de/). Es setzt sich zusammen aus Journalisten, Codern und Designern. Wir haben uns auf daten- und dokumentengetriebene Recherche und ihre Umsetzung in interaktiven Anwendungen und im crossmedialen Umfeld spezialisiert.
+
+[BR Data](http://br.de/data/) ist das datenjournalistische Team des [Bayerischen Rundfunks](http://br.de/). Es setzt sich zusammen aus Journalisten, Entwickler und Designern. Wir haben uns auf daten- und dokumentengetriebene Recherche und ihre Umsetzung in interaktiven Anwendungen und im crossmedialen Umfeld spezialisiert.
 
 Wir freuen uns über Fragen, Kritik oder Anregungen:
+
 - BR Data auf Twitter [@br_data](https://twitter.com/br_data/)
 - BR Data per [E-Mail](mailto:data@br.de) kontaktieren

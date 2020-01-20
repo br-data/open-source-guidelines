@@ -28,7 +28,7 @@ Verschieden Projekte stellen unterschiedliche Anforderungen an die Veröffentlic
 
 - **Datenanalysen:** Bei Datenanalysen geht es vor allem darum, die einzelnen Schritte der Analyse transparent und reproduzierbar gestalten.
 - **Datensätze:** Es sollten vor allem Datensätze veröffentlicht werden, die anderweitig schwer zu bekommen sind. Zum Beispiel Datensätze, die von einer Behördenseite befreit wurden (z.B. durch einen Scraper). Wichtig: Urheberrechte abklären.
-- **interaktive Grafiken:** Auch interaktive Grafiken und Anwendungen, welche man auf ein anderes Themen anwenden könnte und die aufwändig erstellt wurden, sollten veröffentlicht werden. Beispiel: Wahlkarten, Netzwerk-Visualisierungen. 
+- **interaktive Grafiken:** Auch interaktive Grafiken und Anwendungen, welche man auf ein anderes Themen anwenden könnte und die aufwändig erstellt wurden, sollten veröffentlicht werden. Beispiel: Wahlkarten, Netzwerk-Visualisierungen.
 - **Tools:** Allgemeine Werkzeuge, die bei einem bestimmten, verallgemeinerbaren, Workflow helfen. Beispiel: PDFs herunterladen, in Text umwandeln, in eine Datenbank importieren. Dabei geht es vor allem darum, häufige Aufgaben zu automatisieren.
 - **(Web-)Anwendungen:** Größere, aufwendige Software-Projekte, die einen verallgemeinerbaren Nutzen haben.
 
@@ -38,7 +38,25 @@ Vor allem für das Readme und die Dokumentation ist es wichtig, sich zu überleg
 
 ## Projekt benennen
 
+Dinge zu kurz und verständlich zu benennen ist eine der größten Herausforderungen, vor allem wenn es um ein neues Github-Repository geht. Wir benennen unsere Repositories nach folgendem Schema:
 
+```text
+(jahr)-titel-typ
+```
+
+Projekte bekommen nur dann eine Jahreszahl, wenn sie in einem bestimmten Jahr abgeschlossen wurden und nicht weiterentwickelt werden. Meistens sind das Datenanalysen und Recherchen.
+
+Der Titel sollte sprechend sein und das Thema möglichst kurz und genau beschreiben. Der Titel kann mehrere Wörter enthalten, diese sollten jedoch ebenfalls kleingeschrieben und durch einen Bindestrich getrennt werden.
+
+Als letztes wird der Typ des Repositories angegeben. Gute Suffixe sind:
+
+- **-analyse**: Datenanalyse oder -auswertung
+- **-longread**: Artikel mit interaktiven Elementen
+- **-website**: Webseite mit mehren Seiten
+- **-data**: Sammlung an (Roh-)Daten ohne Skripte
+- **-service**: API oder Micro-Service
+- **-tool**: Werkzeug, um eine bestimmte Aufgabe zu lösen
+- **-guide**: Anleitung, um etwas zu tun
 
 ## README schreiben
 
@@ -51,9 +69,9 @@ Die Readme-Datei ist die zentrale Quelle für Dokumentation und Informationen ü
 - **Demo- oder Artikellink:** Wie sieht das Projekt aus, wenn alles funktioniert? Wie fühlt sich die Benutzeroberfläche an?
 - **Datenquelle:** Woher kommen die Daten und wie kann ich sie verwenden (Copyright)?
 - **Abhängigkeiten:** Was brauche ich zusätzlich, um das Projekt zum Laufen zu bekommen (z.B. Python 2.7 und PostgreSQL)?
-- **Verwendung:** Was muss ich machen, um das Projekt zu verwenden? 
+- **Verwendung:** Was muss ich machen, um das Projekt zu verwenden?
 - **Funktionen:** Welche Funktionen (oftmals Skripten) hat das Projekt und wie verwende ich diese im Detail?
-- **Probleme:** Welche häufigen Probleme gibt es (und wie gehe ich damit um)? 
+- **Probleme:** Welche häufigen Probleme gibt es (und wie gehe ich damit um)?
 - **Verbesserungen oder Roadmap:** Was kann man besser machen? Wo steht das Projekt und wo soll es mal hin?
 - **Dank und Quellen:** Wer hat zum dem Projekt beigetragen, wovon wurde das Projekt inspiriert?
 
@@ -88,7 +106,7 @@ Beim Veröffentlichen des Repositories wird auch der ganze Commit-Verlauf nach a
 
 Beispiel:
 
-```
+```console
 $ git commit -m "Fix social media icon alignment in header"
 ```
 

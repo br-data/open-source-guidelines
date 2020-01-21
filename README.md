@@ -1,6 +1,6 @@
 # Open Source bei BR Data
 
-Ein paar Empfehlungen zum Veröffentlichen von bestehenden Projekten auf Github. Grundsätzlich versuchen wir, alle Projekte zu veröffentlichen, die es unseren Benutzen ermöglichen, Rechercheweg und Datenanalyse hinter einer Geschichte zu verstehen und zu verifizieren (Transparenz). Wir sind bereit, zu unseren Fehlern zu stehen und sie gegebenenfalls auszubessern. Im Idealfall können die von uns entwickelten Programme und Analysen von der Datenjournalismus-Community weiter genutzt und verbessert werden.
+Ein paar Empfehlungen zum Veröffentlichen von bestehenden Projekten auf Github. Grundsätzlich versuchen wir, alle Projekte zu veröffentlichen, die es unseren Nutzern ermöglichen, Rechercheweg und Datenanalyse hinter einer Geschichte zu verstehen und zu verifizieren (Transparenz). Wir sind bereit, zu unseren Fehlern zu stehen und sie gegebenenfalls auszubessern. Im Idealfall können die von uns entwickelten Programme und Analysen von der Datenjournalismus-Community weiter genutzt und verbessert werden.
 
 *„Open Source ist kein Dogma, sondern eine partizipative Kultur der Offenheit und des Teiles. Denn am Ende konkurrieren wir (Journalisten) nicht um das beste Werkzeug, sondern um die beste Geschichte.“*
 
@@ -54,7 +54,7 @@ Als letztes wird der **Typ des Repositories** angegeben. Gute Suffixe sind:
 - **-longread**: Artikel mit interaktiven Elementen
 - **-chart**: Grafik oder Datenvisualisierung
 - **-website**: Webseite mit mehren Seiten
-- **-data**: Sammlung an (Roh-)Daten ohne Skripte
+- **-data**: Sammlung an (Roh-)Daten, ohne Skripte
 - **-service**: API oder Micro-Service
 - **-tool**: Werkzeug, um eine bestimmte Aufgabe zu lösen
 - **-guide**: Anleitung, um etwas zu tun
@@ -84,9 +84,9 @@ Die Readme-Datei ist die zentrale Quelle für Dokumentation und Informationen ü
 
 **Wie umfangreich sollte das Readme sein?** In das Readme gehören alle Informationen, die unmittelbar notwendig sind, um das Projekt zu verwenden. Details, wie man eine bestimmte Datenbank aufsetzt, muss man nicht ausführen. Hier reicht ein Link oder zumindest der Hinweis, dass die Installation einer bestimmten Datenbank vorausgesetzt wird (Stichwort Anforderungen).
 
-**Wann sollte ich damit anfangen, ein Readme zu schreiben?** Am besten sofort. Eigentlich sollte man alle Funktionen, die man neu hinzufügt, gleich dokumentieren. Das ist deutlich einfacher, als sich am Ende des Projektes nochmal über alle Funktionen Gedanken machen zu müssen. Außerdem merkt man beim Dokumentieren schnell, ob eine Funktion sinnvoll definiert ist (selbsterklärende Schnittstelle, Abstraktionsniveau).
+**Wann sollte ich damit anfangen, ein Readme zu schreiben?** Am besten sofort. Eigentlich sollte man alle Funktionen, die man neu hinzufügt, gleich dokumentieren. Das ist deutlich einfacher als sich am Ende des Projektes nochmal über alle Funktionen Gedanken machen zu müssen. Außerdem merkt man beim Dokumentieren schnell, ob eine Funktion sinnvoll definiert ist (selbsterklärende Schnittstelle, Abstraktionsniveau).
 
-**Deutsch oder Englisch?** Grundsätzlich empfiehlt sich, alles in Englisch zu dokumentieren. Wenn ein Projekt aber ein ausschließlich deutsches Thema behandelt, kann man aber zumindest die README in Deutsch verfassen. Eine besondere Schwierigkeit ist die Übersetzung von deutschen Behördennamen oder Rechtsbegriffen. Im Fall von *Einspeisevergütung* bespielsweise bietet es sich an, den Originalbegriff und eine Übersetzung zu verwenden: *feed-in tariffs (Einspeisevergütung)*.
+**Deutsch oder Englisch?** Grundsätzlich empfiehlt sich, alles in Englisch zu dokumentieren. Wenn ein Projekt aber ein ausschließlich deutsches Thema behandelt, kann man aber zumindest die README in Deutsch verfassen. Eine besondere Schwierigkeit ist die Übersetzung von deutschen Behördennamen oder Rechtsbegriffen. Im Fall von *Einspeisevergütung* beispielsweise bietet es sich an, den Originalbegriff und eine Übersetzung zu verwenden: *feed-in tariffs (Einspeisevergütung)*.
 
 Die Dokumentation im Code, sowie Variablen- und Funktionsnamen, sollten eigentlich immer englisch sein. Allerdings gilt auch hier die Ausnahme für Behördennamen und Rechtsbegriffen.
 
@@ -163,7 +163,7 @@ $ git push
 
 ## Badges hinzufügen
 
-Sehr beliebt sind sogenannte Badges oder Shields. Sie zeigen bestimmte Projektinformationen, wie die Lizenz, der Build-Status oder die Zahl der Issues, direkt in der README an. Ein vollständige Übersicht findet sich bei [Shields.io](https://shields.io/). Dort kann mit wenigen Klicks Badges für verschiedene Zwecke selbst erzeugen. 
+Sehr beliebt sind sogenannte Badges oder Shields. Sie zeigen bestimmte Projektinformationen, wie die Lizenz, der Build-Status oder die Zahl der Issues, direkt in der README an. Ein vollständige Übersicht findet sich bei [Shields.io](https://shields.io/). Dort kann mit wenigen Klicks Badges für verschiedene Zwecke selbst erzeugen.
 
 Beispiele aus dem [elasticsearch-frontend](https://github.com/br-data/elasticsearch-frontend):
 
@@ -178,7 +178,7 @@ Damit andere Benutzer den Code für ihre eigenen Projekte nutzen können, brauch
 1. Auf der Github-Projektseite **Create new file** auswählen.
 2. Als Name der Datei `LICENSE` eingeben.
 3. Vorlage **MIT** aus der Liste rechts auswählen.
-4. Copyright-Zeile in `Copyright (c) 2017 Bayerischer Rundfunk` ändern.
+4. Copyright-Zeile in `Copyright (c) 2020 Bayerischer Rundfunk` ändern.
 5. Unten auf der Seite eine Commit-Beschreibung `Add license` eingeben und bestätigen.
 
 **Warnung:** Wichtig ist, dass die Urheberrechte für alle im Repository enthaltene Inhalte (Code, Text, Daten, Schriften, Bilder ...) beim Bayerischen Rundfunk liegen. Fremdinhalte wie Software-Bibliotheken sollten immer über einen Paketmanager – wie beispielsweise [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/) oder [pip](https://pypi.python.org/) – installiert werden.
@@ -208,7 +208,7 @@ Das Übertragen der Eigentumsrechte kann einige Minuten dauern.
 
 Wenn man das Repository bereits aus dem eigenen Rechner ausgecheckt hat, muss man den Remote-URL anpassen. Vergisst man die die Remote-URL anzupassen kann man nicht mehr Pushen und Pullen. Die neue URL bekommt man, indem man auf der Github-Projektseite auf **Clone or download** geht. Es empfiehlt sich immer den SSH-Link zu kopieren (statt des HTTPS-Links).
 
-#### In Github Desktop
+#### Github Desktop
 
 1. In der rechten oberen Ecke auf *Settings (⚙️) > Repository Settings...* gehen
 2. In der Sidebar *Remote* auswählen

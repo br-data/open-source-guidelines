@@ -122,7 +122,7 @@ $ git commit -m "Fix social media icon alignment in header"
 
 Das Einchecken von großen Dateien, vor allem Binärdateien (.zip, .jpeg, .pdf, .mp3, ...), sollte vermieden werden, da Git dadurch sehr langsam wird. Das gilt vor allem dann, wenn man regemäßig geänderte Versionen dieser Binärdateien einchecken muss. Ein paar Bilder mit jeweils einem Megabyte sind in der Regel kein Problem, bei hunderten Bildern oder einer 500 Megabyte großen Datei wird Git jedoch schon merklich langsamer.
 
-Es empfiehlt sich daher viele oder sehr große Binärdateien extern zu speichen, zum Beispiel in einer Dropbox, Google Drive oder einem anderem Cloud-Speicher. Eine weiter gute Lösung ist [Git LFS](https://git-lfs.github.com/) (Large File Storage), welches eine nahtlose Integration von Git und Github.com bietet.
+Es empfiehlt sich daher, viele oder sehr große Binärdateien extern zu speichern, zum Beispiel bei Dropbox, Google Drive oder einem anderen Cloud-Anbieter. Eine weitere gute Lösung ist [Git LFS](https://git-lfs.github.com/) (Large File Storage), welches eine nahtlose Integration in Git ermöglicht. Git LFS verarbeitet große Dateien, indem es nur einen Verweis (*Pointer*) auf die große Datei im Repository ablegt, nicht aber die Datei selbst. Große Dateien werden auf speziellen Github-Servern gespeichert, können aber auch bei anderen Cloud-Anbietern gespeichert werden.
 
 Sehr große Repositories kann man deutlich schneller klonen, wenn man nur den letzten Änderungsstand mit `--depth=1` herunterlädt. Das beschleunigt das Arbeiten mit Git erheblich.
 

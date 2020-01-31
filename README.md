@@ -13,6 +13,7 @@ Ein paar Empfehlungen zum Veröffentlichen von bestehenden Projekten auf Github.
 - [README schreiben](#readme-schreiben)
 - [Dokumentation und Kommentare](#dokumentation-und-kommentare)
 - [Commit-Messages](#commit-messages)
+- [Große Dateien vermeiden](#große-dateien-vermeiden)
 - [Passwörter entfernen](#passwörter-entfernen)
 - [Badges](#badges-hinzufügen)
 - [Lizenz hinzufügen](#lizenz-hinzufügen)
@@ -123,10 +124,10 @@ Das Einchecken von großen Dateien, vor allem Binärdateien (.zip, .jpeg, .pdf, 
 
 Es empfiehlt sich daher viele oder sehr große Binärdateien extern zu speichen, zum Beispiel in einer Dropbox, Google Drive oder einem anderem Cloud-Speicher. Eine weiter gute Lösung ist [Git LFS](https://git-lfs.github.com/) (Large File Storage), welches eine nahtlose Integration von Git und Github.com bietet.
 
-Wer selbst mit einem sehr großen Repository arbeiten muss, kann beim Klonen auch nur die letzte Version auszuchecken. Das beschleunigt den Downloadvorgang erheblich:
+Sehr große Repositories kann man deutlich schneller klonen, wenn man nur den letzten Änderungsstand mit `--depth=1` herunterlädt. Das beschleunigt das Arbeiten mit Git erheblich.
 
 ```console
-$ git clone --depth=1 git@github.com:br-data/open-source-guidelines.git
+$ git clone --depth=1 git@github.com:br-data/mein-repo.git
 ```
 
 ## Passwörter entfernen
@@ -136,7 +137,7 @@ Manchmal hat man versehentlich Passwörter, API-Keys oder andere vertrauliche In
 Als erstes muss das Repository gespiegelt werden:
 
 ```console
-$ git clone --mirror git@github.com:digitalegarage/mein-repo.git
+$ git clone --mirror git@github.com:br-data/mein-repo.git
 ```
 
 Möglichkeit A: Alle Dateien löschen die *id_rsa* oder *id_dsa* heißen:

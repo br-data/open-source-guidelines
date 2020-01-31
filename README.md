@@ -117,11 +117,23 @@ Beispiel:
 $ git commit -m "Fix social media icon alignment in header"
 ```
 
+## Große Dateien vermeiden
+
+Das Einchecken von großen Dateien, vor allem Binärdateien (.zip, .jpeg, .pdf, .mp3, ...), sollte vermieden werden, da Git dadurch sehr langsam wird. Das gilt vor allem dann, wenn man regemäßig geänderte Versionen dieser Binärdateien einchecken muss. Ein paar Bilder mit jeweils einem Megabyte sind in der Regel kein Problem, bei hunderten Bildern oder einer 500 Megabyte großen Datei wird Git jedoch schon merklich langsamer.
+
+Es empfiehlt sich daher viele oder sehr große Binärdateien extern zu speichen, zum Beispiel in einer Dropbox, Google Drive oder einem anderem Cloud-Speicher. Eine weiter gute Lösung ist [Git LFS](https://git-lfs.github.com/) (Large File Storage), welches eine nahtlose Integration von Git und Github.com bietet.
+
+Wer selbst mit einem sehr großen Repository arbeiten muss, kann beim Klonen auch nur die letzte Version auszuchecken. Das beschleunigt den Downloadvorgang erheblich:
+
+```console
+$ git clone --depth=1 git@github.com:br-data/open-source-guidelines.git
+```
+
 ## Passwörter entfernen
 
-Manchmal hat man versehentlich Passwörter, API-Keys oder andere vertrauliche Informationen in einem Repo eingecheckt. Diese sollte man unbedingt vor Veröffentlichung des Projektes entfernen. Am einfachsten geht das mit dem [BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/). Es empfiehlt sich, das Projekt vorher zu sichern. 
+Manchmal hat man versehentlich Passwörter, API-Keys oder andere vertrauliche Informationen in einem Repo eingecheckt. Diese sollte man unbedingt vor Veröffentlichung des Projektes entfernen. Am einfachsten geht das mit dem [BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/). Es empfiehlt sich, das Projekt vorher zu sichern.
 
-Als erstes muss das Repository gespiegelt werden: 
+Als erstes muss das Repository gespiegelt werden:
 
 ```console
 $ git clone --mirror git@github.com:digitalegarage/mein-repo.git
@@ -165,7 +177,7 @@ $ git push
 
 Sehr beliebt sind sogenannte Badges oder Shields. Sie zeigen bestimmte Projektinformationen, wie die Lizenz, der Build-Status oder die Zahl der Issues, direkt in der README an. Ein vollständige Übersicht findet sich bei [Shields.io](https://shields.io/). Dort kann mit wenigen Klicks Badges für verschiedene Zwecke selbst erzeugen.
 
-Beispiele aus dem [elasticsearch-frontend](https://github.com/br-data/elasticsearch-frontend):
+Beispiele aus dem Projekt [elasticsearch-frontend](https://github.com/br-data/elasticsearch-frontend):
 
 [![License](https://img.shields.io/github/license/br-data/elasticsearch-frontend.svg?style=flat-square)]() [![GitHub release](https://img.shields.io/github/release/br-data/elasticsearch-frontend.svg?style=flat-square)]() [![GitHub issues](https://img.shields.io/github/issues/br-data/elasticsearch-frontend.svg?style=flat-square)]()
 
@@ -189,7 +201,7 @@ Eine Beispiel-Lizenz (MIT) findet sich in diesem Repository unter `LICENSE`.
 
 Für viele kleinere Projekte ist nicht davon auszugehen, dass sich darum einen Community bilden wird. Die Veröffentlichung dient dabei eher der Transparenz als der Nutzbarmachung. Daher kann man sich überlegen, ob man folgende Optionen in den Projekteinstellungen (Github-Settings > Options) auszuschalten:
 
-- **Wikis**: Eher für die ausführliche Projektdokumentation gedacht. 
+- **Wikis**: Eher für die ausführliche Projektdokumentation gedacht.
 - **Issues**: Benutzer und Kollegen können Fehler melden und sich Funktionen wünschen.
 - **Projects**: Kanban-Board, Todos und Milestones für größere Projekte.  
 
@@ -199,7 +211,7 @@ Wenn man diese Optionen aktiviert, sollte man auch bereit sein, Zeit in die Bear
 
 Das Veröffentlichen geschieht über die Github-Settings > Options:
 
-1. Projekt veröffentlich: **Make this repository public**
+1. Projekt veröffentlichen: **Make this repository public**
 2. Eigentumsrechte auf `br-data` übertragen: **Transfer ownership**
 
 Das Übertragen der Eigentumsrechte kann einige Minuten dauern.
